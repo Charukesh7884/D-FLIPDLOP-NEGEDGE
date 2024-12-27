@@ -46,26 +46,28 @@ Developed by: CHARUKESH S
 
 RegisterNumber: 212224230044
 ```
-module d_ff(d, clk, rst, q);
-  input d, clk, rst;
-  output reg q;
-
-  always @(negedge clk or posedge rst) begin
-    if (rst)
-      q <= 0; // Reset the flip-flop
-    else
-      q <= d; // D input is passed to Q on the negative clock edge
-  end
+module ex8(D,clk,Q,Qbar);
+input D,clk;
+output reg Q;
+output reg Qbar;
+initial Q=0;
+initial Qbar =1;
+always @ (posedge clk)
+begin
+Q=D;
+Qbar = ~D;
+end
 endmodule
 ```
 
 **RTL DIAGRAM**
 
-![image](https://github.com/user-attachments/assets/9c581dfa-88f6-41a7-b8ea-7f761cae9a5a)
+![image](https://github.com/user-attachments/assets/c8b4fd39-6a3b-4c6c-aed1-4204d3374ef2)
+
 
 **TIMING WAVEFORM**
 
-![image](https://github.com/user-attachments/assets/09637412-9f47-4204-b513-ed26ff334be5)
+![image](https://github.com/user-attachments/assets/ac1791c9-64f3-4758-aa22-3696b0a7813f)
 
 
 **RESULTS**
