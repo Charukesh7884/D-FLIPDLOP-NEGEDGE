@@ -46,7 +46,7 @@ Developed by: CHARUKESH S
 
 RegisterNumber: 212224230044
 ```
-module d_ff_neg_edge (d, clk, rst, q);
+module D(d, clk, rst, q);
   input d, clk, rst;
   output reg q;
 
@@ -70,6 +70,6 @@ endmodule
 ![image](https://github.com/user-attachments/assets/6be81ed9-252d-4dfb-a126-738d938c8ba7)
 
 
-**RESULTS**
+**RESULT**
 
  D flipflop using verilog and validating their functionality using their functional tables are verified
